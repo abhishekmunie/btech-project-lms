@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
-//import com.google.api.client.util.Joiner;
+import com.google.api.client.util.Joiner;
 import com.google.appengine.api.utils.SystemProperty;
 
 public class Utilities {
@@ -123,12 +123,12 @@ public class Utilities {
 	}
 
 	public static String join(List<String> stringList, char separator) {
-//		return Joiner.on(separator).join(stringList);
-		return "";
+		return Joiner.on(separator).join(stringList);
+//		return "";
 	}
 
 	public static String join(List<String> stringList) {
-//		return join(stringList, ',');
-		return "";
+		return join(stringList, ',');
+//		return "";
 	}
 }

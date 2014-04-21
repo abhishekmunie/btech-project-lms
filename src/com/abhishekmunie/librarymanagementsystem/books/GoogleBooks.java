@@ -47,7 +47,6 @@ public class GoogleBooks {
 //	            .setApplicationName("Google-PlusSample/1.0")
 //	            .setJsonHttpRequestInitializer(initializer)
 //	            .build();
-	    HttpRequestInitializer hri = (HttpRequestInitializer) new BooksRequestInitializer();
 		final Books books = new Books.Builder(
 				GoogleNetHttpTransport.newTrustedTransport(), jsonFactory, null)
 				.setApplicationName("vit-lms/1.0")
