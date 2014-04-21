@@ -216,14 +216,16 @@ public class Issue {
 			throws SQLException {
 		int success = 2;
 		Connection conn = null;
-		String statement = "UPDATE lms." + EntityName + "SET "
-				+ Lable.ReturnedDate + " = ? WHERE id = ? ";
+		String statement = "UPDATE lms." + EntityName + " SET "
+				+ Lable.ReturnedDate + " = ? WHERE " + Lable.IssueID + " = ?";
 		PreparedStatement stmt = null;
 		try {
 			conn = Utilities.getSQLConnection();
 			stmt = conn.prepareStatement(statement);
 			stmt.setDate(1, new java.sql.Date(new Date().getTime()));
 			stmt.setInt(2, issueID);
+			System.out.println(statement);
+			System.out.println(stmt.toString());
 			success = stmt.executeUpdate();
 		} finally {
 			if (stmt != null) {
@@ -235,14 +237,14 @@ public class Issue {
 		}
 		return success;
 	}
-	
+
 	public static PreparedStatement getInsertStatement(Connection conn)
 			throws SQLException {
 		String statement = "INSERT INTO lms." + EntityName + " (`"
 				+ Lable.BookISBN + "`, `" + Lable.UserID + "`, `"
 				+ Lable.UserEmail + "`, `" + Lable.IssuerID + "`, `"
 				+ Lable.IssuerEmail + "`, `" + Lable.IssueDate
-				+ "`) VALUES ('?', '?', '?', '?', '?') ";
+				+ "`) VALUES(?, ?, ?, ?, ?, ?)";
 		PreparedStatement stmt = conn.prepareStatement(statement);
 		return stmt;
 	}

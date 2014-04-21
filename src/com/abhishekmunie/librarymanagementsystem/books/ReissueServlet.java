@@ -31,16 +31,18 @@ public class ReissueServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
 		req.setAttribute("isForwordedRequest", true);
+		Reissue reissue = new Reissue(req);
 		try {
 			int issueID = Integer.parseInt(req.getParameter("issueID"));
 			long reissueCount = Reissue.getReissueCountForIssueWithId(issueID);
 			if (reissueCount < CONFIG.REISSUE_LIMIT) {
-				Issue.addReturnDateIntoDatabaseForIssueID(issueID);
+				reissue.addReissueIntoDatabase();
 				req.setAttribute("successmsg",
 						"Book was reissued successfully.");
 				req.getRequestDispatcher(
 						jspURL + "?emailID=" + req.getParameter("emailID"))
 						.forward(req, resp);
+				return;
 			} else {
 				req.setAttribute("errormsg", "Reissue limit exceeded.");
 				req.setAttribute("errorex", null);

@@ -109,7 +109,7 @@ public class Reissue {
 	public static PreparedStatement getInsertStatement(Connection conn)
 			throws SQLException {
 		String statement = "INSERT INTO lms." + EntityName
-				+ " VALUES ('?', '?', '?', '?') ";
+				+ " VALUES (?, ?, ?, ?) ";
 		PreparedStatement stmt = conn.prepareStatement(statement);
 		return stmt;
 	}

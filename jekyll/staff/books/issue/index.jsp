@@ -31,7 +31,7 @@ title: Issue Book
   </div>
   <% } %>
   <div class="panel-body">
-    <form action="/staff/books/issue/" method="post" class="form-horizontal" role="form">
+    <form action="/staff/books/issue/<%=((request.getQueryString() != null) ? "?" + request.getQueryString() : "")%>" method="post" class="form-horizontal" role="form">
       <div class="form-group">
         <label for="inputBookISBN" class="col-sm-2 control-label">Book ISBN</label>
         <div class="col-sm-10">
@@ -47,7 +47,7 @@ title: Issue Book
       <div class="form-group">
         <label for="inputUserEmail" class="col-sm-2 control-label">User Email</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputUserId" {% set_parameter_named userEmail%} placeholder="User Email" required />
+          <input type="email" class="form-control" id="inputUserId" {% set_parameter_named userEmail%} placeholder="User Email" required />
         </div>
       </div>
       <div class="form-group">

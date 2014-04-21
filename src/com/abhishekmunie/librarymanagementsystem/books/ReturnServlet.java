@@ -37,6 +37,7 @@ public class ReturnServlet extends HttpServlet {
 			req.getRequestDispatcher(
 					jspURL + "?emailID=" + req.getParameter("emailID"))
 					.forward(req, resp);
+			return;
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 			req.setAttribute("errormsg", "Invalid Issue ID.");

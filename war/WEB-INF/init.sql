@@ -151,7 +151,6 @@ CREATE TABLE IF NOT EXISTS `lms`.`Reissue` (
   `ReissuerID` VARCHAR(225) NOT NULL,
   `ReissuerEmail` VARCHAR(45) NOT NULL,
   INDEX `fk_Reissue_idx` (`IssueID` ASC),
-  PRIMARY KEY (`IssueID`),
   CONSTRAINT `fk_Reissue`
     FOREIGN KEY (`IssueID`)
     REFERENCES `lms`.`Issue` (`IssueID`));

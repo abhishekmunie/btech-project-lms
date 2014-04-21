@@ -74,10 +74,10 @@ jsp_imports:
           <td><%=issue.getUserEmail()%></td>
           <td><%=issue.getIssueDate()%></td>
           <td>
-            <form action="/staff/books/reissue/" method="post" class="form-inline" role="form">
+            <form action="/staff/books/reissue/<%=((request.getQueryString() != null) ? "?" + request.getQueryString() : "")%>" method="post" class="form-inline" role="form">
               <input type="hidden" name="issueID" value="<%=issue.getIssueID()%>" />
               <input type="hidden" name="emailID" value="<%=emailID%>" />
-              <input typr="submit" class="btn btn-default" value="Reissue" />
+              <input type="submit" class="btn btn-primary" value="Reissue" />
             </form>
           </td>
         </tr>
@@ -85,7 +85,7 @@ jsp_imports:
       </tbody>
     </table>
     <% } else { %>
-      No Issues Found.
+      No Current Issues Found.
     <% } %>
   </div>
   <% } %>
