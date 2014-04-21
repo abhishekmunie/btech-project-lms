@@ -1,0 +1,130 @@
+
+war/*
+!war/WEB-INF
+!war/WEB-INF/*
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+*~
+.cache
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+# Icon must ends with two \r.
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# KDE directory preferences
+.directory
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# Folders to ignore
+.hg
+.svn
+.CVS
+.idea
+
+intermediate/
+node_modules/
+.c9revisions/
+
+# build script local files
+build/buildinfo.properties
+build/config/buildinfo.properties
+
+## Java ##
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+## Eclipse ##
+*.pydevproject
+.metadata
+.gradle
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+closure-compiler-latest/
+
+.idea
+*.iml
+*~
+target/
+classes/
+appengine-generated/
+
+src/com/abhishekmunie/librarymanagementsystem/CONFIG.java
+
+.google_apis/*
+
+.ssl/
+*.pem
+
+client_secrets.json
+
+.testaccounts

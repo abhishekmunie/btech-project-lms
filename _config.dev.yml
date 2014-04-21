@@ -1,0 +1,48 @@
+
+exclude: ['bower_components','css','js','images','WEB-INF','.rvmrc', '.rbenv-version', 'README.md', 'changelog.md', 'bin', 'vendor', 'Gemfile', 'Gemfile.lock', 'Procfile', 'Rakefile', 'unicorn.rb', 'config.ru']
+keep_files:  ['bower_components','css','js','images','WEB-INF']
+#gems: [jekyll-test-plugin, jekyll-jsonify, jekyll-assets]
+
+name: Periyar E.V.R.Central Library
+company: VIT University
+markdown: redcarpet
+pygments: true
+source: jekyll
+destination: war
+
+title_suffix: Periyar E.V.R.Central Library
+tagline: ""
+home: http://btech-project-lms.abhishekmunie.com
+search_title: abhishekmunie.com
+
+production_url : http://btech-project-lms.abhishekmunie.com
+
+ASSET_PATH :
+  static : /static/
+  css    : /css/
+  js     : /js/
+  img    : /images/
+
+main_nav:
+  Books: /books
+  About: /about
+  Contact: /contact
+
+
+imports :
+  css :
+    normalize:       /css/normalize.css
+    bootstrap:       /bower_components/bootstrap/dist/css/bootstrap.min.css
+    bootstrap_theme: /bower_components/bootstrap/dist/css/bootstrap-theme.css
+    font_awesome:    /bower_components/font-awesome/css/font-awesome.min.css
+    main:            /css/main.css
+  modernizr: /bower_components/modernizr/modernizr.js
+  js :
+    bootstrap: /bower_components/bootstrap/dist/js/bootstrap.min.js
+    plugins:   /js/plugins.js
+    main:      /js/main.js
+
+config:
+  google:
+    analytics:
+      id: UA-XXXXX-X

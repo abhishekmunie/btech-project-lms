@@ -1,0 +1,20 @@
+{
+  "name"         : "PassportManagementSystem",
+  "description"  : "",
+  "version"      : "0.0.0",
+  "authors"      : [
+    { "name": "Abhishek Munie", "email": "projects@abhishekmunie.com"," homepage": "http://abhishekmunie.com" }
+  ],
+  "homepage"     : "",
+  "repository"   : {
+    "type": "git",
+    "url": "git://github.com/abhishekmunie/bar.git"
+  },
+  "dependencies" : {
+    "modernizr"    : "latest",
+    "jquery"       : "latest",
+    "bootstrap"    : "latest",
+    "font-awesome" : "latest"
+  },
+  "private"      : "true"
+}

@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Abhishek Munie - Developer - @abhishekmunie
+
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    H5BP, jQuery, Modernizr, Bootstrap 3
+    Font Awesome
+    Google App Engine - Java
