@@ -60,6 +60,7 @@ jsp_imports:
       <thead>
         <tr>
           <th>Issue Id</th>
+          <th>Book ISBN</th>
           <th>User Id</th>
           <th>User Email</th>
           <th>Issue Date</th>
@@ -70,6 +71,7 @@ jsp_imports:
         <% for (Issue issue : issues) { %>
         <tr>
           <td><%=issue.getIssueID()%></td>
+          <td><%=issue.getBookISBN()%></td>
           <td><%=issue.getUserID()%></td>
           <td><%=issue.getUserEmail()%></td>
           <td><%=issue.getIssueDate()%></td>

@@ -49,12 +49,12 @@ public class StaffManagementServlet extends HttpServlet {
 				// break;
 			}
 			req.setAttribute("successmsg", "Staff member with email " + emailid
-					+ " was successfully " + action + ".");
+					+ " was successfully " + action + "ed.");
 			req.getRequestDispatcher(jspURL).forward(req, resp);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			req.setAttribute("errormsg", "Unable to " + action
-					+ " staff member with email " + emailid + ".");
+					+ " staff member with email " + emailid + "d.");
 			req.setAttribute("errorex", e);
 			Utilities.setParametersAsAttributes(req);
 			req.setAttribute("autoFillUsingAttribute", true);
