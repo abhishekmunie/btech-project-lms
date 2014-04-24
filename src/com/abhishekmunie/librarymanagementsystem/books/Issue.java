@@ -224,8 +224,6 @@ public class Issue {
 			stmt = conn.prepareStatement(statement);
 			stmt.setDate(1, new java.sql.Date(new Date().getTime()));
 			stmt.setInt(2, issueID);
-			System.out.println(statement);
-			System.out.println(stmt.toString());
 			success = stmt.executeUpdate();
 		} finally {
 			if (stmt != null) {
